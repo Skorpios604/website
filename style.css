@@ -1,0 +1,110 @@
+:root {
+    --bg-color: #0a0a0a;
+    --grid-item-bg: #111;
+    --grid-item-border: #222;
+    --glow-color: rgba(255, 255, 255, 0.1);
+    --text-color: #eee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 12px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Force a specific number of columns to match the look roughly, or just let it flow */
+@media (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.grid-item {
+    aspect-ratio: 1;
+    background-color: var(--grid-item-bg);
+    border: 1px solid var(--grid-item-border);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-item svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.grid-item.empty {
+    opacity: 0.3;
+    border-color: #1a1a1a;
+}
+
+.grid-item:hover {
+    background-color: #1a1a1a;
+    border-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.grid-item:hover svg {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Specific Glow Colors */
+.vite:hover { box-shadow: 0 0 20px rgba(189, 52, 254, 0.3); border-color: rgba(189, 52, 254, 0.5); }
+.react:hover { box-shadow: 0 0 20px rgba(97, 218, 251, 0.3); border-color: rgba(97, 218, 251, 0.5); }
+.angular:hover { box-shadow: 0 0 20px rgba(221, 0, 49, 0.3); border-color: rgba(221, 0, 49, 0.5); }
+.vue:hover { box-shadow: 0 0 20px rgba(65, 184, 131, 0.3); border-color: rgba(65, 184, 131, 0.5); }
+.solid:hover { box-shadow: 0 0 20px rgba(68, 107, 158, 0.3); border-color: rgba(68, 107, 158, 0.5); }
+.svelte:hover { box-shadow: 0 0 20px rgba(255, 62, 0, 0.3); border-color: rgba(255, 62, 0, 0.5); }
+.qwik:hover { box-shadow: 0 0 20px rgba(172, 126, 244, 0.3); border-color: rgba(172, 126, 244, 0.5); }
+.astro:hover { box-shadow: 0 0 20px rgba(255, 93, 1, 0.3); border-color: rgba(255, 93, 1, 0.5); }
+.remix:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); border-color: rgba(255, 255, 255, 0.5); }
+.nuxt:hover { box-shadow: 0 0 20px rgba(0, 197, 142, 0.3); border-color: rgba(0, 197, 142, 0.5); }
+.next:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); }
+.gatsby:hover { box-shadow: 0 0 20px rgba(102, 51, 153, 0.3); border-color: rgba(102, 51, 153, 0.5); }
+
+/* Fade out edges mask */
+.grid-container {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
