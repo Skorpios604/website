@@ -22,8 +22,8 @@ body {
 .container {
     text-align: center;
     width: 100%;
-    max-width: 1400px;
-    padding: 2rem;
+    max-width: 100%; 
+    padding: 0;      
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 12px;
-    padding: 20px;
+    padding: 0;
     justify-content: center;
 }
 
@@ -104,7 +104,7 @@ h1 {
 .gatsby:hover { box-shadow: 0 0 20px rgba(102, 51, 153, 0.3); border-color: rgba(102, 51, 153, 0.5); }
 
 /* Fade out edges mask */
-.grid-container {
+/* .grid-container {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
+} */
