@@ -146,6 +146,12 @@ h1 {
     width: 28%;
 }
 
+/* Make Figma a touch smaller so it sits slightly more balanced in the square */
+.grid-item.figma .logos-img,
+.grid-item.figma .icon {
+    width: 35%;
+}
+
 /* Special case for Next: logo is black by default so we lighten it at rest so it appears muted
    and return to the black mark on hover (keeps the same transition/scale behavior) */
 .grid-item.next .icon,
