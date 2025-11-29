@@ -78,11 +78,35 @@ h1 {
     justify-content: center;
     font-size: 2.4rem; /* size for font icons */
     opacity: 0.7;
+    /* muted (mono) at rest so images & icon elements start grey */
+    filter: grayscale(100%);
     transition: all 0.3s ease;
     color: #ddd; /* neutral/grayscale look until hover */
     text-align: center;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+/* Vite external image: muted (grayscale) at rest, full-color on hover */
+.grid-item.vite .icon,
+.grid-item.vite .vite-img {
+    /* muted / monochrome at rest so it matches other icons */
+    filter: grayscale(100%) brightness(0.95) contrast(0.9);
+    opacity: 0.7;
+    width: 64%;
+    height: auto;
+    display: block; /* ensure proper layout */
+    margin: 0 auto; /* center */
+    transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Restore the full gradient + yellow bolt on hover */
+.grid-item:hover .vite-img,
+.grid-item:hover .icon.vite-img,
+.grid-item.vite:hover .icon,
+.grid-item.vite:hover .vite-img {
+    filter: none;
+    opacity: 1;
 }
 
 .grid-item.empty {
@@ -105,6 +129,15 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Ensure external logos images match icon behavior */
+.grid-item .logos-img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* Specific Glow Colors */
