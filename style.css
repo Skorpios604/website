@@ -70,6 +70,21 @@ h1 {
     filter: grayscale(100%);
 }
 
+.grid-item .icon {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem; /* size for font icons */
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    color: #ddd; /* neutral/grayscale look until hover */
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 .grid-item.empty {
     opacity: 0.3;
     border-color: #1a1a1a;
@@ -83,10 +98,13 @@ h1 {
     z-index: 10;
 }
 
-.grid-item:hover svg {
+.grid-item:hover .icon {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Specific Glow Colors */
@@ -102,6 +120,44 @@ h1 {
 .nuxt:hover { box-shadow: 0 0 20px rgba(0, 197, 142, 0.3); border-color: rgba(0, 197, 142, 0.5); }
 .next:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); }
 .gatsby:hover { box-shadow: 0 0 20px rgba(102, 51, 153, 0.3); border-color: rgba(102, 51, 153, 0.5); }
+
+/* New icon hover glow colors (keeps the same style) */
+.html:hover { box-shadow: 0 0 20px rgba(228, 79, 38, 0.25); border-color: rgba(228, 79, 38, 0.45); }
+.css:hover { box-shadow: 0 0 20px rgba(41, 109, 241, 0.25); border-color: rgba(41, 109, 241, 0.45); }
+.javascript:hover { box-shadow: 0 0 20px rgba(247, 223, 30, 0.25); border-color: rgba(247, 223, 30, 0.35); }
+.typescript:hover { box-shadow: 0 0 20px rgba(0, 122, 204, 0.25); border-color: rgba(0, 122, 204, 0.45); }
+.next:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.35); border-color: rgba(0, 0, 0, 0.55); }
+.node:hover { box-shadow: 0 0 20px rgba(60, 135, 58, 0.25); border-color: rgba(60, 135, 58, 0.45); }
+.npm:hover { box-shadow: 0 0 20px rgba(197, 49, 41, 0.25); border-color: rgba(197, 49, 41, 0.45); }
+.mongo:hover { box-shadow: 0 0 20px rgba(63, 160, 55, 0.25); border-color: rgba(63, 160, 55, 0.45); }
+.postgres:hover { box-shadow: 0 0 20px rgba(49, 100, 138, 0.25); border-color: rgba(49, 100, 138, 0.45); }
+.docker:hover { box-shadow: 0 0 20px rgba(13, 183, 237, 0.25); border-color: rgba(13, 183, 237, 0.45); }
+.figma:hover { box-shadow: 0 0 20px rgba(162, 89, 255, 0.18); border-color: rgba(162, 89, 255, 0.32); }
+.git:hover { box-shadow: 0 0 20px rgba(240, 79, 35, 0.25); border-color: rgba(240, 79, 35, 0.45); }
+.github:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.35); border-color: rgba(0, 0, 0, 0.55); }
+.gitlab:hover { box-shadow: 0 0 20px rgba(252, 109, 38, 0.25); border-color: rgba(252, 109, 38, 0.45); }
+.terminal:hover { box-shadow: 0 0 20px rgba(139, 233, 253, 0.18); border-color: rgba(139, 233, 253, 0.32); }
+.mysql:hover { box-shadow: 0 0 20px rgba(0, 117, 143, 0.22); border-color: rgba(0, 117, 143, 0.4); }
+
+/* Color the icon on hover to match brand color */
+.html:hover .icon { color: #e44f26; }
+.css:hover .icon { color: #2965f1; }
+.javascript:hover .icon { color: #f7df1e; }
+.typescript:hover .icon { color: #007acc; }
+.react:hover .icon { color: #61dafb; }
+.next:hover .icon { color: #000; }
+.node:hover .icon { color: #3C873A; }
+.npm:hover .icon { color: #c53129; }
+.mongo:hover .icon { color: #47A248; }
+.postgres:hover .icon { color: #336791; }
+.docker:hover .icon { color: #0db7ed; }
+.figma:hover .icon { color: #F24E1E; }
+.git:hover .icon { color: #f04f23; }
+.github:hover .icon { color: #000; }
+.gitlab:hover .icon { color: #fc6d26; }
+.terminal:hover .icon { color: #8be9fd; }
+.vite:hover .icon { color: #646cff; }
+.mysql:hover .icon { color: #00758f; }
 
 /* Fade out edges mask */
 /* .grid-container {

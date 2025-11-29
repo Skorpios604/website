@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frameworks and Tools</title>
+    <!-- Iconify web component (supports many brand icon sets including simple-icons) -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,33 +22,70 @@
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
-            <div class="grid-item vite">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M30.3 5.6c.2-.7 0-1.5-.6-1.9-.6-.4-1.4-.4-1.9.1l-11.3 9.4-11.3-9.4c-.5-.5-1.3-.5-1.9-.1-.6.4-.8 1.2-.6 1.9l4.6 23.9c.1.5.5.9 1 .9h16.4c.5 0 .9-.4 1-.9l4.6-23.9z" fill="#ffb13b"/><path d="M22.5 7.4l-6 21.6-6-21.6 6-5 6 5z" fill="#ffd62e"/></svg>
+            <!-- Row 1: 18 icons requested by user -->
+            <div class="grid-item html">
+                <iconify-icon class="icon" icon="simple-icons:html5" inline role="img" aria-label="HTML5"></iconify-icon>
+            </div>
+            <div class="grid-item css">
+                <iconify-icon class="icon" icon="simple-icons:css3" inline role="img" aria-label="CSS3"></iconify-icon>
+            </div>
+            <div class="grid-item javascript">
+                <iconify-icon class="icon" icon="simple-icons:javascript" inline role="img" aria-label="JavaScript"></iconify-icon>
+            </div>
+            <div class="grid-item typescript">
+                <iconify-icon class="icon" icon="simple-icons:typescript" inline role="img" aria-label="TypeScript"></iconify-icon>
             </div>
             <div class="grid-item react">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#20232a"/><path d="M12 19.5C16.1421 19.5 19.5 16.1421 19.5 12C19.5 7.85786 16.1421 4.5 12 4.5C7.85786 4.5 4.5 7.85786 4.5 12C4.5 16.1421 7.85786 19.5 12 19.5Z" fill="#61dafb"/><circle cx="12" cy="12" r="2" fill="#61dafb"/></svg>
+                <iconify-icon class="icon" icon="simple-icons:react" inline role="img" aria-label="React"></iconify-icon>
             </div>
-            <div class="grid-item angular">
-                <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"><path fill="#DD0031" d="M125 30L31.9 63.2l14.2 123.1L125 230l78.9-43.7 14.2-123.1z"/><path fill="#C3002F" d="M125 30v22.2-.1l23.3-11.2L125 30zM125 52.1v155l62.4-34.6 11.5-99.6-73.9 31.3z"/><path fill="#FFF" d="M125 52.1L51.1 72.9l11.5 99.6 62.4 34.6v-155z"/></svg>
+            <div class="grid-item next">
+                <iconify-icon class="icon" icon="simple-icons:nextdotjs" inline role="img" aria-label="Next.js"></iconify-icon>
             </div>
-            <div class="grid-item vue">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#41B883" d="M78.8 10.9c-2.1-3.6-7.5-3.6-9.6 0L4.7 116.5c-2.2 3.7.5 8.4 4.8 8.4h109c4.3 0 7-4.7 4.8-8.4L78.8 10.9z"/><path fill="#35495E" d="M78.8 10.9c-2.1-3.6-7.5-3.6-9.6 0l-28 48.5 32.8 56.7 32.8-56.7-28-48.5z"/></svg>
+            <div class="grid-item node">
+                <iconify-icon class="icon" icon="simple-icons:nodedotjs" inline role="img" aria-label="Node.js"></iconify-icon>
             </div>
-            <div class="grid-item solid">
-                 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M117.8 33.6l-4.5-12.4c-1.4-3.9-6.9-4.7-9.4-1.4L88.6 40.7 67.4 12.9C65.2 9.9 61 9.6 58.4 12.3L10.6 62.1c-2.6 2.7-1.9 7.2 1.4 9l40.4 22.1 6.8 23.3c1.1 3.8 6.5 4.5 8.6 1.1l50-74z" fill="#446b9e"/><path d="M117.8 33.6l-4.5-12.4c-1.4-3.9-6.9-4.7-9.4-1.4L88.6 40.7 67.4 12.9C65.2 9.9 61 9.6 58.4 12.3L10.6 62.1c-2.6 2.7-1.9 7.2 1.4 9l40.4 22.1 6.8 23.3c1.1 3.8 6.5 4.5 8.6 1.1l50-74z" fill="url(#a)"/><defs><linearGradient id="a" x1="109.9" y1="26.5" x2="35.7" y2="88.2" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#76b3e1"/><stop offset="1" stop-color="#dcf2fd"/></linearGradient></defs></svg>
+            <div class="grid-item npm">
+                <iconify-icon class="icon" icon="simple-icons:npm" inline role="img" aria-label="npm"></iconify-icon>
             </div>
-            <div class="grid-item svelte">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#FF3E00" d="M119.5 28.5L64 2 8.5 28.5v61L64 126l55.5-36.5v-61z"/><path fill="#FFF" d="M103.5 40.5L64 21.5 24.5 40.5v38L64 97.5l39.5-19v-38z"/><path fill="#FF3E00" d="M64 86.5l-28.5-13.5v-27L64 59.5l28.5-13.5v27L64 86.5z"/></svg>
+            
+            <div class="grid-item mongo">
+                <iconify-icon class="icon" icon="simple-icons:mongodb" inline role="img" aria-label="MongoDB"></iconify-icon>
             </div>
-            <div class="grid-item qwik">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M40.6 11.5L13.8 58.2c-1.8 3.1.4 7 4 7h24.6l-6.2 46.8c-.6 4.6 5.6 6.8 8.8 3l35.8-42.7c1.8-2.1.3-5.3-2.4-5.3H54.8l6.2-46.8c.6-4.6-5.6-6.8-8.8-3l-11.6 14.3z" fill="#AC7EF4"/></svg>
+            <div class="grid-item postgres">
+                <iconify-icon class="icon" icon="simple-icons:postgresql" inline role="img" aria-label="PostgreSQL"></iconify-icon>
             </div>
-            <div class="grid-item astro">
-                 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M64 5.5L12.5 116.5h103L64 5.5zm0 25l32.5 70H31.5L64 30.5z" fill="#FF5D01"/><path d="M64 50.5l-16 35h32l-16-35z" fill="#fff"/></svg>
+            <div class="grid-item docker">
+                <iconify-icon class="icon" icon="simple-icons:docker" inline role="img" aria-label="Docker"></iconify-icon>
             </div>
-            <div class="grid-item remix">
-                 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M64 10L14 36v56l50 26 50-26V36L64 10zm36 74L64 103 28 84V44l36-19 36 19v40z" fill="#fff"/><path d="M64 35L38 49v30l26 14 26-14V49L64 35z" fill="#000"/></svg>
+            <div class="grid-item figma">
+                <iconify-icon class="icon" icon="simple-icons:figma" inline role="img" aria-label="Figma"></iconify-icon>
             </div>
+            <div class="grid-item git">
+                <iconify-icon class="icon" icon="simple-icons:git" inline role="img" aria-label="Git"></iconify-icon>
+            </div>
+            <div class="grid-item github">
+                <iconify-icon class="icon" icon="simple-icons:github" inline role="img" aria-label="GitHub"></iconify-icon>
+            </div>
+            <div class="grid-item gitlab">
+                <iconify-icon class="icon" icon="simple-icons:gitlab" inline role="img" aria-label="GitLab"></iconify-icon>
+            </div>
+            <div class="grid-item terminal">
+                <iconify-icon class="icon" icon="simple-icons:bash" inline role="img" aria-label="Shell / Terminal"></iconify-icon>
+            </div>
+            <div class="grid-item vite">
+                <iconify-icon class="icon" icon="simple-icons:vite" inline role="img" aria-label="Vite"></iconify-icon>
+            </div>
+            <div class="grid-item mysql">
+                <iconify-icon class="icon" icon="simple-icons:mysql" inline role="img" aria-label="MySQL"></iconify-icon>
+            </div>
+            <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
+              <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
+              <div class="grid-item empty"></div>
+              <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
@@ -59,15 +98,9 @@
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
-            <div class="grid-item nuxt">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#00C58E" d="M26.5 99.5h75l-37.5-65-37.5 65z"/><path fill="#108775" d="M64 34.5L26.5 99.5h37.5V34.5z"/></svg>
-            </div>
-            <div class="grid-item next">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M64 4C30.9 4 4 30.9 4 64s26.9 60 60 60 60-26.9 60-60S97.1 4 64 4zm28 89H83V53.5L56.5 93H48V40h9v38.5L82.5 40h9.5v53z"/></svg>
-            </div>
-            <div class="grid-item gatsby">
-                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><circle cx="64" cy="64" r="60" fill="#663399"/><path fill="#fff" d="M64 16c-26.5 0-48 21.5-48 48 0 11.5 4.1 22.1 10.9 30.4L94.4 26.9C86.1 20.1 75.5 16 64 16zm-36 48c0-7.3 2.2-14.1 6-19.8l53.8 53.8C82.1 101.8 75.3 104 68 104c-22.1 0-40-17.9-40-40zm80 0c0 7.3-2.2 14.1-6 19.8L48.2 30c5.9-3.8 12.7-6 19.8-6 22.1 0 40 17.9 40 40z"/></svg>
-            </div>
+            <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
+            <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
             <div class="grid-item empty"></div>
