@@ -140,6 +140,12 @@ h1 {
     transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
+/* Make MongoDB icon a little smaller so it sits nicely in the square */
+.grid-item.mongo .logos-img,
+.grid-item.mongo .icon {
+    width: 28%;
+}
+
 /* Special case for Next: logo is black by default so we lighten it at rest so it appears muted
    and return to the black mark on hover (keeps the same transition/scale behavior) */
 .grid-item.next .icon,
