@@ -140,6 +140,20 @@ h1 {
     transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
+/* Special case for Next: logo is black by default so we lighten it at rest so it appears muted
+   and return to the black mark on hover (keeps the same transition/scale behavior) */
+.grid-item.next .icon,
+.grid-item.next .logos-img {
+    filter: grayscale(100%) brightness(1.8) contrast(0.9);
+    opacity: 0.6;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+.grid-item.next:hover .icon,
+.grid-item.next:hover .logos-img {
+    filter: none;
+    opacity: 1;
+}
+
 /* Specific Glow Colors */
 .vite:hover { box-shadow: 0 0 20px rgba(189, 52, 254, 0.3); border-color: rgba(189, 52, 254, 0.5); }
 .react:hover { box-shadow: 0 0 20px rgba(97, 218, 251, 0.3); border-color: rgba(97, 218, 251, 0.5); }
