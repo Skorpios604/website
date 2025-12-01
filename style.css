@@ -166,25 +166,25 @@ h1 {
     opacity: 1;
 }
 
-/* GitHub: make the Octocat interior appear white at rest while still using the remote Iconify icon
-   (we invert the black mark to white at rest; on hover we restore the original icon color) */
-.grid-item.github {
-    /* make the tile background black so the 'outside' appears black */
-    background-color: #000;
-    border-color: #0a0a0a;
-}
+/* ----------------------------------------------------------------- */
+/* GITHUB: Match other icons style                                   */
+/* ----------------------------------------------------------------- */
+
 .grid-item.github .logos-img {
-    /* show the Octocat as white by inverting the black mark; keep muted feel */
-    filter: invert(1) grayscale(100%) brightness(1.0);
-    opacity: 0.9;
-    width: 44%;
-    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+    /* Muted at rest */
+    filter: grayscale(100%) brightness(0.95) contrast(0.9);
+    opacity: 0.7;
+    width: 48%;
+    display: block;
+    margin: 0 auto;
+    transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
-/* Keep cat white on hover as well (no color-restoration) */
+
+/* Full color on hover - invert to make white cat on black circle */
 .grid-item.github:hover .logos-img {
-    transform: scale(1.1);
-    filter: invert(1) grayscale(100%) brightness(1.0);
+    filter: invert(1);
     opacity: 1;
+    transform: scale(1.1);
 }
 
 /* Specific Glow Colors */
@@ -214,7 +214,10 @@ h1 {
 .docker:hover { box-shadow: 0 0 20px rgba(13, 183, 237, 0.25); border-color: rgba(13, 183, 237, 0.45); }
 .figma:hover { box-shadow: 0 0 20px rgba(162, 89, 255, 0.18); border-color: rgba(162, 89, 255, 0.32); }
 .git:hover { box-shadow: 0 0 20px rgba(240, 79, 35, 0.25); border-color: rgba(240, 79, 35, 0.45); }
-.github:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.35); border-color: rgba(0, 0, 0, 0.55); }
+
+/* Updated GitHub Hover Glow: White glow (since black shadow on black bg is invisible) */
+.github:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3); }
+
 .gitlab:hover { box-shadow: 0 0 20px rgba(252, 109, 38, 0.25); border-color: rgba(252, 109, 38, 0.45); }
 .terminal:hover { box-shadow: 0 0 20px rgba(139, 233, 253, 0.18); border-color: rgba(139, 233, 253, 0.32); }
 .mysql:hover { box-shadow: 0 0 20px rgba(0, 117, 143, 0.22); border-color: rgba(0, 117, 143, 0.4); }
@@ -233,14 +236,8 @@ h1 {
 .docker:hover .icon { color: #0db7ed; }
 .figma:hover .icon { color: #F24E1E; }
 .git:hover .icon { color: #f04f23; }
-.github:hover .icon { color: #000; }
+.github:hover .icon { color: #ffffff; } /* CHANGED: Force White on hover */
 .gitlab:hover .icon { color: #fc6d26; }
 .terminal:hover .icon { color: #8be9fd; }
 .vite:hover .icon { color: #646cff; }
 .mysql:hover .icon { color: #00758f; }
-
-/* Fade out edges mask */
-/* .grid-container {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-} */
