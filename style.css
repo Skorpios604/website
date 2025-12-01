@@ -166,6 +166,27 @@ h1 {
     opacity: 1;
 }
 
+/* GitHub: make the Octocat interior appear white at rest while still using the remote Iconify icon
+   (we invert the black mark to white at rest; on hover we restore the original icon color) */
+.grid-item.github {
+    /* make the tile background black so the 'outside' appears black */
+    background-color: #000;
+    border-color: #0a0a0a;
+}
+.grid-item.github .logos-img {
+    /* show the Octocat as white by inverting the black mark; keep muted feel */
+    filter: invert(1) grayscale(100%) brightness(1.0);
+    opacity: 0.9;
+    width: 44%;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+/* Keep cat white on hover as well (no color-restoration) */
+.grid-item.github:hover .logos-img {
+    transform: scale(1.1);
+    filter: invert(1) grayscale(100%) brightness(1.0);
+    opacity: 1;
+}
+
 /* Specific Glow Colors */
 .vite:hover { box-shadow: 0 0 20px rgba(189, 52, 254, 0.3); border-color: rgba(189, 52, 254, 0.5); }
 .react:hover { box-shadow: 0 0 20px rgba(97, 218, 251, 0.3); border-color: rgba(97, 218, 251, 0.5); }
