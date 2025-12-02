@@ -93,7 +93,7 @@ h1 {
     /* muted / monochrome at rest so it matches other icons */
     filter: grayscale(100%) brightness(0.95) contrast(0.9);
     opacity: 0.7;
-    width: 64%;
+    width: 53%;
     height: auto;
     display: block; /* ensure proper layout */
     margin: 0 auto; /* center */
@@ -188,10 +188,6 @@ h1 {
 }
 
 .grid-item.gitlab .logos-img {
-    width: 45%;
-}
-
-.grid-item.vite .logos-img {
     width: 45%;
 }
 
