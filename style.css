@@ -22,8 +22,8 @@ body {
 .container {
     text-align: center;
     width: 100%;
-    max-width: 100%; 
-    padding: 0;      
+    max-width: 100%;
+    padding: 0;
 }
 
 h1 {
@@ -36,17 +36,12 @@ h1 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(8, 1fr);
     gap: 12px;
     padding: 0;
     justify-content: center;
-}
-
-/* Force a specific number of columns to match the look roughly, or just let it flow */
-@media (min-width: 1000px) {
-    .grid-container {
-        grid-template-columns: repeat(18, 1fr);
-    }
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .grid-item {
@@ -76,12 +71,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.4rem; /* size for font icons */
+    font-size: 2.4rem;
+    /* size for font icons */
     opacity: 0.7;
     /* muted (mono) at rest so images & icon elements start grey */
     filter: grayscale(100%);
     transition: all 0.3s ease;
-    color: #ddd; /* neutral/grayscale look until hover */
+    color: #ddd;
+    /* neutral/grayscale look until hover */
     text-align: center;
     margin: 0 auto;
     box-sizing: border-box;
@@ -95,8 +92,10 @@ h1 {
     opacity: 0.7;
     width: 53%;
     height: auto;
-    display: block; /* ensure proper layout */
-    margin: 0 auto; /* center */
+    display: block;
+    /* ensure proper layout */
+    margin: 0 auto;
+    /* center */
     transition: filter 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -160,6 +159,7 @@ h1 {
     opacity: 0.6;
     transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
+
 .grid-item.next:hover .icon,
 .grid-item.next:hover .logos-img {
     filter: none;
@@ -192,56 +192,218 @@ h1 {
 }
 
 /* Specific Glow Colors */
-.vite:hover { box-shadow: 0 0 20px rgba(189, 52, 254, 0.3); border-color: rgba(189, 52, 254, 0.5); }
-.react:hover { box-shadow: 0 0 20px rgba(97, 218, 251, 0.3); border-color: rgba(97, 218, 251, 0.5); }
-.angular:hover { box-shadow: 0 0 20px rgba(221, 0, 49, 0.3); border-color: rgba(221, 0, 49, 0.5); }
-.vue:hover { box-shadow: 0 0 20px rgba(65, 184, 131, 0.3); border-color: rgba(65, 184, 131, 0.5); }
-.solid:hover { box-shadow: 0 0 20px rgba(68, 107, 158, 0.3); border-color: rgba(68, 107, 158, 0.5); }
-.svelte:hover { box-shadow: 0 0 20px rgba(255, 62, 0, 0.3); border-color: rgba(255, 62, 0, 0.5); }
-.qwik:hover { box-shadow: 0 0 20px rgba(172, 126, 244, 0.3); border-color: rgba(172, 126, 244, 0.5); }
-.astro:hover { box-shadow: 0 0 20px rgba(255, 93, 1, 0.3); border-color: rgba(255, 93, 1, 0.5); }
-.remix:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); border-color: rgba(255, 255, 255, 0.5); }
-.nuxt:hover { box-shadow: 0 0 20px rgba(0, 197, 142, 0.3); border-color: rgba(0, 197, 142, 0.5); }
-.next:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); }
-.gatsby:hover { box-shadow: 0 0 20px rgba(102, 51, 153, 0.3); border-color: rgba(102, 51, 153, 0.5); }
+.vite:hover {
+    box-shadow: 0 0 20px rgba(189, 52, 254, 0.3);
+    border-color: rgba(189, 52, 254, 0.5);
+}
+
+.react:hover {
+    box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+    border-color: rgba(97, 218, 251, 0.5);
+}
+
+.angular:hover {
+    box-shadow: 0 0 20px rgba(221, 0, 49, 0.3);
+    border-color: rgba(221, 0, 49, 0.5);
+}
+
+.vue:hover {
+    box-shadow: 0 0 20px rgba(65, 184, 131, 0.3);
+    border-color: rgba(65, 184, 131, 0.5);
+}
+
+.solid:hover {
+    box-shadow: 0 0 20px rgba(68, 107, 158, 0.3);
+    border-color: rgba(68, 107, 158, 0.5);
+}
+
+.svelte:hover {
+    box-shadow: 0 0 20px rgba(255, 62, 0, 0.3);
+    border-color: rgba(255, 62, 0, 0.5);
+}
+
+.qwik:hover {
+    box-shadow: 0 0 20px rgba(172, 126, 244, 0.3);
+    border-color: rgba(172, 126, 244, 0.5);
+}
+
+.astro:hover {
+    box-shadow: 0 0 20px rgba(255, 93, 1, 0.3);
+    border-color: rgba(255, 93, 1, 0.5);
+}
+
+.remix:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nuxt:hover {
+    box-shadow: 0 0 20px rgba(0, 197, 142, 0.3);
+    border-color: rgba(0, 197, 142, 0.5);
+}
+
+.next:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.gatsby:hover {
+    box-shadow: 0 0 20px rgba(102, 51, 153, 0.3);
+    border-color: rgba(102, 51, 153, 0.5);
+}
 
 /* New icon hover glow colors (keeps the same style) */
-.html:hover { box-shadow: 0 0 20px rgba(228, 79, 38, 0.25); border-color: rgba(228, 79, 38, 0.45); }
-.css:hover { box-shadow: 0 0 20px rgba(41, 109, 241, 0.25); border-color: rgba(41, 109, 241, 0.45); }
-.javascript:hover { box-shadow: 0 0 20px rgba(247, 223, 30, 0.25); border-color: rgba(247, 223, 30, 0.35); }
-.typescript:hover { box-shadow: 0 0 20px rgba(0, 122, 204, 0.25); border-color: rgba(0, 122, 204, 0.45); }
-.next:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.35); border-color: rgba(0, 0, 0, 0.55); }
-.node:hover { box-shadow: 0 0 20px rgba(60, 135, 58, 0.25); border-color: rgba(60, 135, 58, 0.45); }
-.npm:hover { box-shadow: 0 0 20px rgba(197, 49, 41, 0.25); border-color: rgba(197, 49, 41, 0.45); }
-.mongo:hover { box-shadow: 0 0 20px rgba(63, 160, 55, 0.25); border-color: rgba(63, 160, 55, 0.45); }
-.postgres:hover { box-shadow: 0 0 20px rgba(49, 100, 138, 0.25); border-color: rgba(49, 100, 138, 0.45); }
-.docker:hover { box-shadow: 0 0 20px rgba(13, 183, 237, 0.25); border-color: rgba(13, 183, 237, 0.45); }
-.figma:hover { box-shadow: 0 0 20px rgba(162, 89, 255, 0.18); border-color: rgba(162, 89, 255, 0.32); }
-.git:hover { box-shadow: 0 0 20px rgba(240, 79, 35, 0.25); border-color: rgba(240, 79, 35, 0.45); }
+.html:hover {
+    box-shadow: 0 0 20px rgba(228, 79, 38, 0.25);
+    border-color: rgba(228, 79, 38, 0.45);
+}
+
+.css:hover {
+    box-shadow: 0 0 20px rgba(41, 109, 241, 0.25);
+    border-color: rgba(41, 109, 241, 0.45);
+}
+
+.javascript:hover {
+    box-shadow: 0 0 20px rgba(247, 223, 30, 0.25);
+    border-color: rgba(247, 223, 30, 0.35);
+}
+
+.typescript:hover {
+    box-shadow: 0 0 20px rgba(0, 122, 204, 0.25);
+    border-color: rgba(0, 122, 204, 0.45);
+}
+
+.next:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.55);
+}
+
+.node:hover {
+    box-shadow: 0 0 20px rgba(60, 135, 58, 0.25);
+    border-color: rgba(60, 135, 58, 0.45);
+}
+
+.npm:hover {
+    box-shadow: 0 0 20px rgba(197, 49, 41, 0.25);
+    border-color: rgba(197, 49, 41, 0.45);
+}
+
+.mongo:hover {
+    box-shadow: 0 0 20px rgba(63, 160, 55, 0.25);
+    border-color: rgba(63, 160, 55, 0.45);
+}
+
+.postgres:hover {
+    box-shadow: 0 0 20px rgba(49, 100, 138, 0.25);
+    border-color: rgba(49, 100, 138, 0.45);
+}
+
+.docker:hover {
+    box-shadow: 0 0 20px rgba(13, 183, 237, 0.25);
+    border-color: rgba(13, 183, 237, 0.45);
+}
+
+.figma:hover {
+    box-shadow: 0 0 20px rgba(162, 89, 255, 0.18);
+    border-color: rgba(162, 89, 255, 0.32);
+}
+
+.git:hover {
+    box-shadow: 0 0 20px rgba(240, 79, 35, 0.25);
+    border-color: rgba(240, 79, 35, 0.45);
+}
 
 /* Updated GitHub Hover Glow: White glow (since black shadow on black bg is invisible) */
-.github:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3); }
+.github:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
 
-.gitlab:hover { box-shadow: 0 0 20px rgba(252, 109, 38, 0.25); border-color: rgba(252, 109, 38, 0.45); }
-.terminal:hover { box-shadow: 0 0 20px rgba(139, 233, 253, 0.18); border-color: rgba(139, 233, 253, 0.32); }
-.mysql:hover { box-shadow: 0 0 20px rgba(0, 117, 143, 0.22); border-color: rgba(0, 117, 143, 0.4); }
+.gitlab:hover {
+    box-shadow: 0 0 20px rgba(252, 109, 38, 0.25);
+    border-color: rgba(252, 109, 38, 0.45);
+}
+
+.terminal:hover {
+    box-shadow: 0 0 20px rgba(139, 233, 253, 0.18);
+    border-color: rgba(139, 233, 253, 0.32);
+}
+
+.mysql:hover {
+    box-shadow: 0 0 20px rgba(0, 117, 143, 0.22);
+    border-color: rgba(0, 117, 143, 0.4);
+}
 
 /* Color the icon on hover to match brand color */
-.html:hover .icon { color: #e44f26; }
-.css:hover .icon { color: #2965f1; }
-.javascript:hover .icon { color: #f7df1e; }
-.typescript:hover .icon { color: #007acc; }
-.react:hover .icon { color: #61dafb; }
-.next:hover .icon { color: #000; }
-.node:hover .icon { color: #3C873A; }
-.npm:hover .icon { color: #c53129; }
-.mongo:hover .icon { color: #47A248; }
-.postgres:hover .icon { color: #336791; }
-.docker:hover .icon { color: #0db7ed; }
-.figma:hover .icon { color: #F24E1E; }
-.git:hover .icon { color: #f04f23; }
-.github:hover .icon { color: #ffffff; } /* CHANGED: Force White on hover */
-.gitlab:hover .icon { color: #fc6d26; }
-.terminal:hover .icon { color: #8be9fd; }
-.vite:hover .icon { color: #646cff; }
-.mysql:hover .icon { color: #00758f; }
+.html:hover .icon {
+    color: #e44f26;
+}
+
+.css:hover .icon {
+    color: #2965f1;
+}
+
+.javascript:hover .icon {
+    color: #f7df1e;
+}
+
+.typescript:hover .icon {
+    color: #007acc;
+}
+
+.react:hover .icon {
+    color: #61dafb;
+}
+
+.next:hover .icon {
+    color: #000;
+}
+
+.node:hover .icon {
+    color: #3C873A;
+}
+
+.npm:hover .icon {
+    color: #c53129;
+}
+
+.mongo:hover .icon {
+    color: #47A248;
+}
+
+.postgres:hover .icon {
+    color: #336791;
+}
+
+.docker:hover .icon {
+    color: #0db7ed;
+}
+
+.figma:hover .icon {
+    color: #F24E1E;
+}
+
+.git:hover .icon {
+    color: #f04f23;
+}
+
+.github:hover .icon {
+    color: #ffffff;
+}
+
+/* CHANGED: Force White on hover */
+.gitlab:hover .icon {
+    color: #fc6d26;
+}
+
+.terminal:hover .icon {
+    color: #8be9fd;
+}
+
+.vite:hover .icon {
+    color: #646cff;
+}
+
+.mysql:hover .icon {
+    color: #00758f;
+}
