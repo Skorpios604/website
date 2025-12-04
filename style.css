@@ -36,11 +36,11 @@ h1 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    /* grid-template-columns set by JS */
     gap: 12px;
     padding: 0;
     justify-content: center;
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
